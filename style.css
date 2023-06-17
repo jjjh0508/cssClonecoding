@@ -37,9 +37,10 @@ li{
 
 button,
 button:focus {
-    border: none;
-    cursor: pointer;
-    outline: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	background-color: transparent;
 }
 /*Header*/
 header {
@@ -53,6 +54,7 @@ header {
 
 header .logo{
     font-size: var(--font-large);
+    font-weight: bold;
 }
 
 header .logo i {
@@ -75,72 +77,83 @@ header .icons .fa-search {
     max-width: 1000px;
 }
 
-.info {
+body .infoAndUpNext .info {
     padding: var(--padding);
 }
 
-.info .metadate .hashtags {
+.infoAndUpNext .info .metadate .hashtags {
     display: flex;
     font-size: var(--font-small);
     color: var(--blue-color);
 }
 
-.info .metadate .hashtags li {
+.infoAndUpNext .info .metadate .hashtags li {
     margin-right: var(--padding);
 }
 
-.titleAndButton {
-    display: flexbox;
-}
 
-.info .metadate .titleAndButton {
+.infoAndUpNext .info .metadate .titleAndButton {
     display: flex;
 }
 
-.info .metadate .titleAndButton .title {
+.infoAndUpNext .info .metadate .titleAndButton .title {
     font-size: var(--font-medium);
-    display: -webkit-box;
-    -webkit-box-orient:  vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
     margin-right: var(--padding);
+   
+    
 }
-.info .metadate .titleAndButton .moreBtn {
+.title.clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.moreBtn.clicked {
+    transform: rotate(180deg);
+    transition: transfrom 300ms ease-in-out;
+
+}
+
+.infoAndUpNext .info .metadate .titleAndButton .moreBtn {
     height: 100%;
 }
 
-.info .views {
+
+.infoAndUpNext .info .views {
     font-size: var(--font-small);
     color: var(--grey-dark-color);
 }
 
 /*Actions Buttons*/
-.info .actions {
+.infoAndUpNext .info .actions {
     display: flex;
     justify-content: space-around;
     margin: var(--padding) 0;
 }
 
-.info .actions button {
+.infoAndUpNext .info .actions button {
     display: flex;
     flex-direction: column;
     font-size: var(--font-small);
     color: var(--grey-dark-color);
 }
 
-.info .actions button i {
+.infoAndUpNext .info .actions button i {
     margin: 0 auto;
     margin-bottom: calc(var(--padding)/2);
     font-size: 16px;
 }
 
 
-.info .actions button i.active{
+.infoAndUpNext .info .actions button i.active{
     color: var(--blue-color);
 }
-
+.infoAndUpNext {
+	display: flex;
+	flex-direction: column;
+}
 /*Channel Description*/
-.info .channel {
+.infoAndUpNext .info .channel {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--grey-light-color);
@@ -148,32 +161,97 @@ header .icons .fa-search {
 
 }
 
-.info .channel .metadate {
+.infoAndUpNext .info .channel .metadate {
     display: flex;
     align-items: center;
 }
 
-.info .channel .metadate .info {
+.infoAndUpNext .info .channel .metadate .info {
     display: flex;
     flex-direction: column;
 }
-.info .channel .metadate img {
+.infoAndUpNext .info .channel .metadate img {
     width: var(--avatar-size);
     height: var(--avatar-size);
     border-radius: 50%;
 }
 
-.info .channel .metadate .info .name {
+.infoAndUpNext .info .channel .metadate .info .name {
     font-size: var(--font-medium);
 }
 
-.info .channel .metadate .info .subsrcibers {
+.infoAndUpNext .info .channel .metadate .info .subsrcibers {
     font-size: var(--font-small);
     color: var(--grey-dark-color);
 }
 
-.info .channel .subscribe {
+.infoAndUpNext .info .channel .subscribe {
     text-transform: uppercase;
     color: var(--red-color);
     font-size: var(--font-medium);
+}
+
+.upNext {
+    padding: 0 var(--padding);
+}
+
+.upNext > .title {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+
+.upNext .item {
+    display:flex ;
+    margin-top: var(--padding);
+}
+
+
+.upNext .item .img{
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+}
+.upNext .item .img img {
+    width: 100%;
+}
+.upNext .item .info {
+    flex:  1 1 60%;
+}
+
+.upNext .item .moreBtn{
+    flex: 1 1 5%;
+}
+
+.upNext .item .info {
+    display:  flex;
+    flex-direction: column;
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color)
+}
+
+
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .infoAndUpNext {
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+    .infoAndUpNext .info{
+		flex: 1 1 60%;
+	}
+	.infoAndUpNext .upNext{
+		flex: 1 1 40%;
+	}
+	.upNext .item .info .title {
+		font-size: var(--font-medium);
+}
+
 }

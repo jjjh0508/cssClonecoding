@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
      rel="stylesheet"/>
@@ -13,6 +14,7 @@
         src="https:kit.fontawesome.com/2d323a629b.js"
         crossorigin="anonymous">
     </script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <!--header-->
@@ -32,7 +34,8 @@
         <video controls src="video/DancingTeacher2.mp4" ></video>
     </section>
 
-    <!--Video info-->
+    <div class="infoAndUpNext">
+        <!--Video info-->
     <section class="info">
         <!--Metadata-->
         <div class="metadate">
@@ -42,14 +45,18 @@
             <li>#crazy</li>
           </ul>
           <div class="titleAndButton">
-            <span class="title">
-                춤추는 선생님 엄청나다. 너무 신난다 재미있다 최고 최고 쿨하다 길이가 부족한데 할 말 이 없다 최고다
+            <span class="title clamp">
+                춤추는 선생님 엄청나다. 너무 신난다 재미있다 최고 최고 쿨하다 길이가 부족한데 할 말 이 없다 최고다클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 
+                프론트엔드 개발자 입문편: HTML, CSS, JavascriptHTML, CSS, Javascript
+                HTML, CSS, Javascript,HTML, CSS, Javascript ,HTML, CSS, Javascript
+                HTML, CSS, Javascript, HTML, CSS, Javascript ,HTML, CSS, Javascript
+                HTML, CSS, Javascript
             </span>
             <button class="moreBtn">
                 <i class="fas fa-caret-down"></i>
             </button>
           </div>
-          <span class="views">1M views 1 month ago</span>
+          <div class="views">1M views 1 days ago</div>
         </div>
         <!--Actions-->
         <ul class="actions">
@@ -80,11 +87,12 @@
             <button class="subscribe">subscribe</button>
         </div>
     </section>
+    <!--upNext-->
     <section class="upNext">
         <span class="title">Up next</span>
         <ul>
             <li class="item">
-                <img src="image/image1.jpg" alt="">
+                <div class="img"><img src="image/image1.jpg" alt=""></div>
                 <div class="info">
                     <span class="title">썩소 마임맨</span>
                     <span class="name">마임맨</span>
@@ -93,20 +101,26 @@
                 <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
             </li>
             <li class="item">
-                <img src="image/image2.jpg" alt="">
+                <div class="img"><img src="image/image2.jpg" alt=""></div>
+                <div class="info">
                 <span class="title">우리집 강아지 잔다</span>
-                <span class="channel">전지환</span>
+                <span class="name">전지환</span>
                 <span class="views">99K</span>
+            </div>
                 <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
             </li>
             <li class="item">
-                <img src="image/lira.jpg" alt="">
+                <div class="img"><img src="image/lira.jpg" alt=""></div>
+                <div class="info">
                 <span class="title">강한 상남자</span>
-                <span class="channel">상남자</span>
+                <span class="name">상남자</span>
                 <span class="views">1</span>
+                </div>
                 <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
             </li>
         </ul>
     </section>
+    </div>
+    
 </body>
 </html
